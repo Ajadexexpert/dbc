@@ -1,0 +1,120 @@
+/* General reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+body {line-height:1.6; scroll-behavior:smooth;}
+
+/* Navigation */
+header {background: #002366; color: #ffd700; position: sticky; top:0; z-index:1000; }
+nav {display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;}
+nav .logo img {height:50px;}
+nav ul {list-style:none; display:flex; gap:1rem;}
+nav ul li a {color:#ffd700; text-decoration:none; transition:0.3s;}
+nav ul li a:hover {color:#ffffff;}
+.menu-toggle {display:none; cursor:pointer; font-size:1.5rem;}
+
+
+/* Hero Section */
+.hero {background:#001f4d; color:#ffd700; text-align:center; padding:6rem 2rem; transition:all 0.5s ease;}
+.hero h1 {font-size:3rem; animation:fadeInDown 1s;}
+.hero p {font-size:1.2rem; margin:1rem 0; animation:fadeInUp 1s;}
+.hero a {display:inline-block; padding:0.7rem 1.5rem; background:#ffd700; color:#002366; text-decoration:none; border-radius:5px; transition:0.3s;}
+.hero a:hover {background:#ffc107;}
+
+/* Sections */
+section {padding:4rem 2rem;}
+section h2 {text-align:center; margin-bottom:2rem; font-size:2.5rem; color:#002366;}
+
+/* Cards */
+.card {background:#f4f4f4; border-radius:10px; overflow:hidden; margin:1rem; box-shadow:0 2px 10px rgba(0,0,0,0.2); transition:transform 0.3s;}
+.card img {width:100%; display:block;}
+.card h3 {color:#002366; padding:1rem;}
+.card p {padding:0 1rem 1rem 1rem;}
+.card p {padding-right:20 1rem 1rem 1rem;}
+.card:hover {transform:translateY(-10px);}
+.card h2 {font-family: Georgia, 'Times New Roman', Times, serif;}
+.card h2 {color: gold;}
+
+/* Container for multiple team cards */
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center; /* center cards in grid cells */
+}
+
+/* Teams Card */
+.teams {
+  background: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.teams img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.teams h1 {
+  background-color: rgb(207, 0, 0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: gold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.teams h3 {
+  color: #002366;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.teams p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+.teams:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .teams {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .teams {
+    max-width: 100%;
+  }
+}
+
+
+/* Flex layouts */
+.services, .blog, .about, .contact {display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;}
+.services .card, .blog .card, .about .card, .contact .card {flex:1 1 300px;}
+
+/* Footer */
+footer {background:#002366; color:#ffd700; text-align:center; padding:2rem;}
+
+/* Scroll to top button */
+#scrollTopBtn {position:fixed; bottom:40px; right:40px; padding:0.5rem 1rem; font-size:1.2rem; display:none; background:#ffd700; color:#002366; border:none; border-radius:5px; cursor:pointer; transition:0.3s;}
+#scrollTopBtn:hover {background:#ffc107;}
+
+/* Animations */
+@keyframes fadeInDown {from {opacity:0; transform:translateY(-50px);} to {opacity:1; transform:translateY(0);}}
+@keyframes fadeInUp {from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);}}
+
+@media(max-width:768px){
+  nav ul {flex-direction:column; display:none; background:#002366; position:absolute; top:70px; right:0; width:200px; padding:1rem;}
+  nav ul.active {display:flex;}
+  .menu-toggle {display:block;}
+}

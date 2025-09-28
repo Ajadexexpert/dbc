@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page 2 | Dynamic Business Consult</title>
+<link rel="shortcut icon" href="https://i.postimg.cc/pTBN17rt/Whats-App-Image-2025-09-21-at-08-28-40-f3a7c032.jpg" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+  <div class="logo"><img src="https://i.postimg.cc/pTBN17rt/Whats-App-Image-2025-09-21-at-08-28-40-f3a7c032.jpg" alt="Logo"></div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="testimonials.html">Landing 1</a></li>
+    <li><a href="our teams.html">Landing 2</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+</header>
+
+<section class="hero">
+  <h1>Landing Page 2</h1>
+  <p>Discover our advanced solutions designed to help your business thrive in today’s market.</p>
+  <a href="contact.html">Get Started Now</a>
+</section>
+
+<section class="services">
+<h2>Our Solutions</h2>
+<div class="card">
+  <img src="https://avatars.mds.yandex.net/i?id=a7df82a7a2e6a63019c75b5c353572448e7d2638-5402592-images-thumbs&n=13" 
+  alt="Digital Marketing">
+  <h3>Operational Efficiency</h3>
+  <p>Improve processes, reduce costs, and enhance performance.</p>
+</div>
+<div class="card">
+  <img src="https://avatars.mds.yandex.net/i?id=55a9bc423b492aea9dca09dd656777f6e753100e-12190492-images-thumbs&n=13" 
+  alt="Ecommerce">
+  <h3>Ecommerce</h3>
+  <p>Innovative marketing strategies to reach your target audience.</p>
+</div>
+<div class="card">
+  <img src="https://avatars.mds.yandex.net/i?id=1f00b075d2ae769014c199e11965d207169d4b21-15619481-images-thumbs&n=13" 
+  alt="Graphic Design">
+  <h3>Ecommerce</h3>
+  <p>Making every visuals Innovative.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+</footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+<script>
+const scrollBtn=document.getElementById('scrollTopBtn');
+window.onscroll=function(){if(document.body.scrollTop>200||document.documentElement.scrollTop>200){scrollBtn.style.display="block";}else{scrollBtn.style.display="none";}};
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+</script>
+</body>
+</html>
